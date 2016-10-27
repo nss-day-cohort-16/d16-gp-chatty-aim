@@ -15,25 +15,26 @@
   <body>
     <div class="container">
 
+
       <!-- Static navbar -->
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
 
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li ><a href="#">Logo goes here</a></li>
-              <li><input type="text" class="form-control" id="inputField" placeholder="type your message here!"></li>
-              <li><button type="button" class="btn btn-primary">Clear Messages</button></li>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li ><img src="images/logo.jpg" height="50px" width="50px"></li>
+                <li><input type="text" class="form-control" id="inputField" placeholder="type your message here!"></li>
+                <li><button type="button" class="btn btn-primary">Clear Messages</button></li>
 
-            </ul>
+              </ul>
 
-          </div class="checkboxes"><!--/.nav-collapse -->
-          <label id ="darkCheck" class="checkbox-inline"><input type="checkbox" value="">Dark Theme</label>
+            </div class="checkboxes"><!--/.nav-collapse -->
+            <label id ="darkCheck" class="checkbox-inline"><input type="checkbox" value="">Dark Theme</label>
 
-          <label id ="largeCheck" class="checkbox-inline"><input type="checkbox" value="">Large Text</label>
-        </div><!--/.container-fluid -->
-      </nav>
-      <div class="container">
+            <label id ="largeCheck" class="checkbox-inline"><input type="checkbox" value="">Large Text</label>
+          </div><!--/.container-fluid -->
+        </nav>
+      <div class="row" id="messageContainer">
         <h4>Messages</h4>
         <div id="outputBox" class="well well-lg">Basic Well</div>
       </div>
