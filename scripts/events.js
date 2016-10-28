@@ -19,6 +19,7 @@ darkCheck.addEventListener('click', darkFunc);
 
 function largeFunc() { // Toggles font-size to be larger when checked
 	console.log('click event on largeCheck');
+	outputBox.classList.toggle('larger-text');
 }
 
 function darkFunc() { // Toggles to dark theme when checked
