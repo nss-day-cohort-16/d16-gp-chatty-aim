@@ -2,6 +2,7 @@
 
 var largeCheck = document.getElementById('largeCheck');
 var inputField = document.getElementById('inputField');
+var outputBox = document.getElementById('outputBox');
 
 // EVENT LISTENERS
 
@@ -12,6 +13,7 @@ inputField.addEventListener('keyup', checkEnter);
 
 function largeFunc() { // Toggles font-size to be larger when checked
 	console.log('click event on largeCheck');
+	outputBox.classList.toggle("larger-text");
 }
 
 function checkEnter(e) { // Checks value of inputField on "Enter" press
