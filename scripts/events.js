@@ -15,6 +15,25 @@ clearMessages.addEventListener('click', messagesClear);
 largeCheck.addEventListener('click', largeFunc);
 darkCheck.addEventListener('click', darkFunc);
 
+// document.querySelector("body").addEventListener("click", function(event) {
+//   console.log(event);
+
+//   // Handle the click event on any li
+//   if (event.target.tagName.toLowerCase() === "li") {
+//     console.log("You clicked on an <li> element");
+//   }
+
+//   // Handle the click event on any DOM element with a certain class
+//   if (event.target.className === "article-section") {
+//     console.log("You clicked on an `article-section` element");
+//   }
+
+//   // Inspect the `id` property of the event target
+//   if (event.target.id === "page-title") {
+//     console.log("You clicked on the page-title element");
+//   }
+// });
+
 // FUNCTIONS
 
 function largeFunc() { // Toggles font-size to be larger when checked
@@ -47,6 +66,5 @@ function messagesClear() {
 
 
 // CALLS
-var _messages = [];
-Chatty.loadMessages();
-console.log(Chatty.getMessages());
+// var _messages = [];
+Chatty.loadMessages(Chatty.listMessages);
