@@ -24,6 +24,7 @@ function largeFunc() { // Toggles font-size to be larger when checked
 
 function darkFunc() { // Toggles to dark theme when checked
 	console.log('click event on darkCheck');
+	outputBox.classList.toggle('darktheme');
 }
 
 function checkEnter(e) { // Checks value of inputField on "Enter" press
