@@ -2,23 +2,23 @@
 	"messages": [
 		{
 			"id": 0,
-			"message": "test1"
+			"message": "Hey bra, how we doin' man?"
 		},
 		{
 			"id": 1,
-			"message": "test2"
+			"message": "It's been a while man, life's so rad!"
 		},
 		{
 			"id": 2,
-			"message": "test3"
+			"message": "Aw man, you want a beer?"
 		},
 		{
 			"id": 3,
-			"message": "test4"
+			"message": "Aw man, this is the best.  I'm so glad we're all back together and stuff!"
 		},
 		{
 			"id": 4,
-			"message": "test5"
+			"message": "Hey, did you know about the party after the show?"
 		}
 	]
 }
