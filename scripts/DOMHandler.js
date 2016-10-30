@@ -13,8 +13,31 @@ inputField.addEventListener('keyup', checkEnter);
 clearMessages.addEventListener('click', messagesClear);
 largeCheck.addEventListener('click', largeFunc);
 darkCheck.addEventListener('click', darkFunc);
+outputBox.addEventListener('click', outputBoxFunc);
+
+/* HELPER FUNCTIONS */
+
+function initMessage(messagesArg) {
+	console.log(messagesArg);
+  for (var i = 0; i < messagesArg.length; i++){
+    Chatty.writeMessages(messagesArg[i]);
+    Chatty.putMessageOnDOM(outputBox, messagesArg[i], i);
+  }
+}
 
 /* EVENT LISTENER CALLBACKS */
+
+function checkEnter(e) { // Checks value of inputField on "Enter" press
+	if (e.keyCode === 13 && inputField.value.length) { // Only submits if inputField is has 1 or more characters
+		console.log('Enter keyup event');
+		submitMessage();
+		clearInput();
+	}
+}
+
+function messagesClear() {
+	console.log('click clearMessages');
+}
 
 function largeFunc() { // Toggles font-size to be larger when checked
 	console.log('click event on largeCheck');
@@ -26,12 +49,8 @@ function darkFunc() { // Toggles to dark theme when checked
 	outputBox.classList.toggle('darktheme');
 }
 
-function checkEnter(e) { // Checks value of inputField on "Enter" press
-	if (e.keyCode === 13 && inputField.value.length) { // Only submits if inputField is has 1 or more characters
-		console.log('Enter keyup event');
-		submitMessage();
-		clearInput();
-	}
+function outputBoxFunc() {
+
 }
 
 function clearInput() {
@@ -39,10 +58,6 @@ function clearInput() {
 	inputField.value = "";
 }
 
-function messagesClear() {
-	console.log('click clearMessages');
-}
+/* INITIALISE MESSAGES */
 
-
-Chatty.loadMessages(Chatty.listMessages);
-Chatty.getMessages(Chatty.showMessages);
+Chatty.loadMessages(initMessage);

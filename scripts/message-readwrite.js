@@ -6,7 +6,7 @@ var Chatty = (function (oldChatty) {
 	};
 
 	oldChatty.writeMessages = function (messageObj) {
-		_currentMessages.push(messagesObj);
+		_currentMessages.push(messageObj);
 	};
 
 	oldChatty.removeMessages = function (index) {
@@ -16,8 +16,8 @@ var Chatty = (function (oldChatty) {
     oldChatty.putMessageOnDOM = function (elementID, messageObj, idNumber) {
         var outputMessage = "";
 
-        outputMessage += `<li class="alert alert-danger">${currentMessage.message} 
-      	<button type="button" class="btn btn-success" id="${currentMessage.id}">Delete</button></li>`;
+        outputMessage += `<li class="alert alert-danger">${messageObj.message} 
+      	<button type="button" class="btn btn-success" id="${messageObj.id}">Delete</button></li>`;
 
         elementID.innerHTML += outputMessage;
      };
