@@ -1,9 +1,9 @@
-var Chatty = (function(oldChatty) {
+var Chatty = (function (oldChatty) {
      var _messages = [];
 
      oldChatty.loadMessages = function(callbackFunction) {
           var loader = new XMLHttpRequest();
-          loader.open("GET", "messages.JSON");
+          loader.open("GET", "json/messages.json");
           loader.send();
           loader.addEventListener("load", function() {
           _messages = JSON.parse(this.responseText).messages;
@@ -15,8 +15,6 @@ var Chatty = (function(oldChatty) {
           console.log("The data didn't come!");
           });
      };
-
-
 
      oldChatty.listMessages = function (messages) {
      //List messages in DOM
@@ -32,10 +30,6 @@ var Chatty = (function(oldChatty) {
 
           outputBox.innerHTML = outputMessage;
      };
-
-
-
-
 
      oldChatty.getMessages = function() {
           // console.log(oldChatty.getMessages);

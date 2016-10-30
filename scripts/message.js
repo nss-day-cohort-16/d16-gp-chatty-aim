@@ -3,13 +3,12 @@ var Chatty = (function (oldChatty) {
 
 	var addNewMessage = function(userInput) {
 		oldChatty.addMessage(userInput);
-// Pulling new message from "pull.js"
-	};
+	// Pulling new message from "pull.js"
+		};
 
-// Add new message to well
+	// Add new message to well
 
-return oldChatty;
+	return oldChatty;
 
 })(Chatty || {});
 
-Chatty.getMessages(Chatty.showMessages);

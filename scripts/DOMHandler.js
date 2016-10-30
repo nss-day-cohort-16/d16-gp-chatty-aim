@@ -64,7 +64,5 @@ function messagesClear() {
 }
 
 
-
-// CALLS
-// var _messages = [];
 Chatty.loadMessages(Chatty.listMessages);
+Chatty.getMessages(Chatty.showMessages);
