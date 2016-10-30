@@ -4,58 +4,54 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Asynchronous Instant Messenger</title>
-
-    <!-- Bootstrap -->
     <link href="/lib/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
-
   </head>
   <body>
     <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <nav class="panel-heading">
+              <div class="input-group col-md-12">
+                <div class="col-md-2">
+                  <img src="images/logo.png" height="50px" width="50px">
+                </div>
+                <div class="col-md-8">
+                  <input type="text" class="form-control" id="inputField" placeholder="type your message here!">
+                </div>
+                <div class="col-md-2">
+                  <button id="clearMessages" type="button" class="btn btn-primary">Clear Messages</button>
+                </div>
+              </div>
 
+              <div class="col-md-offset-4 chkbox">
+                <label id ="darkCheck" class="checkbox-inline"><input type="checkbox" value="">Dark Theme</label>
+              </div>
 
-      <!-- Static navbar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
-          <div class="container-fluid">
+              <div class="col-md-offset-2 chkbox">
+                <label id ="largeCheck" class="checkbox-inline"><input type="checkbox" value="">Large Text</label>
+              </div>
+            </nav>
 
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li ><img src="images/logo.png" height="50px" width="50px"></li>
-                <li><input type="text" class="form-control" id="inputField" placeholder="type your message here!"></li>
-                <li><button id="clearMessages" type="button" class="btn btn-primary">Clear Messages</button></li>
-
-              </ul>
-
-            </div class="checkboxes"><!--/.nav-collapse -->
-            <label id ="darkCheck" class="checkbox-inline"><input type="checkbox" value="">Dark Theme</label>
-
-            <label id ="largeCheck" class="checkbox-inline"><input type="checkbox" value="">Large Text</label>
-          </div><!--/.container-fluid -->
-        </nav>
-      <div class="row" id="messageContainer">
-        <h4>Messages</h4>
-        <div id="outputBox" class="well well-lg">
-
-
+            <div id="messageContainer">
+              <div class="panel-body">
+                <ul id="outputBox">
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-
-
-    </div> <!-- /container —>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- LOCAL SCRIPTS -->
-
     <script src="scripts/Chatty.js"></script>
     <script src="scripts/pull.js"></script>
     <script src="scripts/message.js"></script>
     <script src="scripts/remove.js"></script>
     <script src="scripts/events.js"></script>
-
   </body>
 </html>

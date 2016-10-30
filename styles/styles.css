@@ -13,3 +13,6 @@
 .darktheme {
 	background-color: black;
 }
+
+.chkbox {
+  display: inline-block; }
