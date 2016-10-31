@@ -49,8 +49,11 @@ function darkFunc() { // Toggles to dark theme when checked
 	outputBox.classList.toggle('darktheme');
 }
 
-function outputBoxFunc() {
-
+function outputBoxFunc(event) {
+	if (event.target.innerHTML == "Delete") {
+		var messageEl = event.target.parentElement;
+		Chatty.removeMessage(messageEl);
+	}
 }
 
 function clearInput() {

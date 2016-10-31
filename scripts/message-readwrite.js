@@ -10,13 +10,15 @@ var Chatty = (function (oldChatty) {
 	};
 
 	oldChatty.removeMessages = function (index) {
-		//
+		var messageA = _currentMessages.slice(0, index);
+		var messageB = _currentMessages.slice(index + 1);
+		_currentMessages = messageA.concat(messageB);
 	};
 
     oldChatty.putMessageOnDOM = function (elementID, messageObj, idNumber) {
         var outputMessage = "";
 
-        outputMessage += `<li class="alert alert-danger">${messageObj.message} 
+        outputMessage += `<li class="alert alert-info" id="${idNumber}">${messageObj.message} 
       	<button type="button" class="btn btn-success pull-right" id="${messageObj.id}">Delete</button></li>`;
 
         elementID.innerHTML += outputMessage;

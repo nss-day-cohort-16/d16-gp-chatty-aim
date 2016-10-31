@@ -1,6 +1,7 @@
 var Chatty = (function (oldChatty) {
 
 	oldChatty.removeMessage = function(element) {
+		console.log(element);
 		Chatty.removeMessages(parseInt(element.id));
 		outputBox.removeChild(element);
 
