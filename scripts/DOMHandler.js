@@ -64,3 +64,7 @@ function clearInput() {
 /* INITIALISE MESSAGES */
 
 Chatty.loadMessages(initMessage);
+
+/* PLAY WEEZER */
+var begin = new Audio("audio/weezer.mp4");
+begin.play();
