@@ -36,7 +36,8 @@ function checkEnter(e) { // Checks value of inputField on "Enter" press
 }
 
 function messagesClear() {
-	console.log('click clearMessages');
+	clearMessages.disabled = true;
+	outputBox.innerHTML = "";
 }
 
 function largeFunc() { // Toggles font-size to be larger when checked
@@ -66,5 +67,6 @@ function clearInput() {
 Chatty.loadMessages(initMessage);
 
 /* PLAY WEEZER */
+
 var begin = new Audio("audio/weezer.mp4");
 begin.play();
