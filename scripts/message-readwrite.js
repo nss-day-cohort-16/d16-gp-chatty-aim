@@ -17,7 +17,7 @@ var Chatty = (function (oldChatty) {
         var outputMessage = "";
 
         outputMessage += `<li class="alert alert-danger">${messageObj.message} 
-      	<button type="button" class="btn btn-success" id="${messageObj.id}">Delete</button></li>`;
+      	<button type="button" class="btn btn-success pull-right" id="${messageObj.id}">Delete</button></li>`;
 
         elementID.innerHTML += outputMessage;
      };

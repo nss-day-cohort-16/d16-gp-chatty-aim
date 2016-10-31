@@ -17,3 +17,10 @@
 .chkbox {
   display: inline-block; 
 }
+
+.outputBody {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
