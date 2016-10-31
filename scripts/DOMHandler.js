@@ -27,40 +27,46 @@ function initMessage(messagesArg) {
 
 /* EVENT LISTENER CALLBACKS */
 
-function checkEnter(e) { // Checks value of inputField on "Enter" press
-	if (e.keyCode === 13 && inputField.value.length) { // Only submits if inputField is has 1 or more characters
-		console.log('Enter keyup event');
-		submitMessage();
-		clearInput();
+function checkEnter(event) { 
+	// Checks value of inputField on "Enter" press
+	if (event.keyCode === 13 && inputField.value.length) {
+		var index = Chatty.getMessages().length;
+		var messageObj = {
+			"message": inputField.value
+		};
+		Chatty.putMessageOnDOM(outputBox, messageObj, index);
+		Chatty.writeMessages(messageObj);
+		inputField.value = '';
+		clearMessages.disabled = false;
 	}
 }
 
 function messagesClear() {
+	// Clears all messages from the DOM
 	clearMessages.disabled = true;
 	outputBox.innerHTML = "";
 }
 
-function largeFunc() { // Toggles font-size to be larger when checked
+function largeFunc() { 
+	// Toggles font-size to be larger when checked
 	console.log('click event on largeCheck');
 	outputBox.classList.toggle('larger-text');
 }
 
-function darkFunc() { // Toggles to dark theme when checked
+function darkFunc() { 
+	// Toggles to dark theme when checked
 	console.log('click event on darkCheck');
 	outputBox.classList.toggle('darktheme');
 }
 
 function outputBoxFunc(event) {
+	// Removes the message from the DOM
 	if (event.target.innerHTML == "Delete") {
 		var messageEl = event.target.parentElement;
 		Chatty.removeMessage(messageEl);
 	}
 }
 
-function clearInput() {
-	console.log("clear inputField after enter press");
-	inputField.value = "";
-}
 
 /* INITIALISE MESSAGES */
 

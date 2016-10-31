@@ -1,23 +1,18 @@
 {
 	"messages": [
 		{
-			"id": 0,
 			"message": "Hey bra, how we doin' man?"
 		},
 		{
-			"id": 1,
 			"message": "It's been a while man, life's so rad!"
 		},
 		{
-			"id": 2,
 			"message": "Aw man, you want a beer?"
 		},
 		{
-			"id": 3,
 			"message": "Aw man, this is the best.  I'm so glad we're all back together and stuff!"
 		},
 		{
-			"id": 4,
 			"message": "Hey, did you know about the party after the show?"
 		}
 	]
