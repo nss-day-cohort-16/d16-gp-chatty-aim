@@ -2,6 +2,8 @@
 
 var largeCheck = document.getElementById('largeCheck');
 var darkCheck = document.getElementById('darkCheck');
+var largeCheckID = document.getElementById('largeCheckID');
+var darkCheckID = document.getElementById('darkCheckID');
 var inputField = document.getElementById('inputField');
 var clearMessages = document.getElementById('clearMessages');
 var outputBox = document.getElementById('outputBox');
@@ -48,15 +50,23 @@ function messagesClear() {
 }
 
 function largeFunc() {
-	// Toggles font-size to be larger when checked
-	console.log('click event on largeCheck');
-	outputBox.classList.toggle('larger-text');
+	if (largeCheckID.checked) {
+		outputBox.classList.add('larger-text');
+	}
+
+	if (!largeCheckID.checked) {
+		outputBox.classList.remove('larger-text');
+	}
 }
 
 function darkFunc() {
-	// Toggles to dark theme when checked
-	console.log('click event on darkCheck');
-	outputBox.classList.toggle('darktheme');
+	if (darkCheckID.checked) {
+		outputBox.classList.add('darktheme');
+	}
+
+	if (!darkCheckID.checked) {
+		outputBox.classList.remove('darktheme');
+	}
 }
 
 function outputBoxFunc(event) {
