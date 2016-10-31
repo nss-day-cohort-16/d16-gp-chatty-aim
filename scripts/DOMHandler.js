@@ -27,7 +27,7 @@ function initMessage(messagesArg) {
 
 /* EVENT LISTENER CALLBACKS */
 
-function checkEnter(event) { 
+function checkEnter(event) {
 	// Checks value of inputField on "Enter" press
 	if (event.keyCode === 13 && inputField.value.length) {
 		var index = Chatty.getMessages().length;
@@ -47,13 +47,13 @@ function messagesClear() {
 	outputBox.innerHTML = "";
 }
 
-function largeFunc() { 
+function largeFunc() {
 	// Toggles font-size to be larger when checked
 	console.log('click event on largeCheck');
 	outputBox.classList.toggle('larger-text');
 }
 
-function darkFunc() { 
+function darkFunc() {
 	// Toggles to dark theme when checked
 	console.log('click event on darkCheck');
 	outputBox.classList.toggle('darktheme');
@@ -65,8 +65,11 @@ function outputBoxFunc(event) {
 		var messageEl = event.target.parentElement;
 		Chatty.removeMessage(messageEl);
 	}
+	var listItems = document.getElementsByTagName("li");
+	if (listItems.length === 0) {
+		clearMessages.disabled = true;
+	}
 }
-
 
 /* INITIALISE MESSAGES */
 
