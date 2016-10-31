@@ -14,8 +14,12 @@
 	background-color: black;
 }
 
+.darkBody {
+	background-color: #343233;
+}
+
 .chkbox {
-  display: inline-block; 
+  display: inline-block;
 }
 
 .outputBody {
@@ -26,4 +30,10 @@
 
 #weezer {
 	background-color: #009BD3;
+}
+
+.dark-info {
+    color: white;
+    background-color: #982A14;
+    border-color: #bce8f1;
 }

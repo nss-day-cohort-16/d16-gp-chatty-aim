@@ -61,11 +61,25 @@ function largeFunc() {
 
 function darkFunc() {
 	if (darkCheckID.checked) {
-		outputBox.classList.add('darktheme');
+		messageContainer.classList.add('darktheme');
+		document.getElementsByTagName("body")[0].classList.add('darkBody');
+		console.log(document.getElementsByTagName("body")[0]);
+		var messages = document.getElementsByTagName("li");
+			for (var i = 0; i < messages.length; i++) {
+				messages[i].classList.remove('alert-info');
+				messages[i].classList.add('dark-info');
+			}
 	}
 
 	if (!darkCheckID.checked) {
-		outputBox.classList.remove('darktheme');
+		messageContainer.classList.remove('darktheme');
+		document.getElementsByTagName("body")[0].classList.remove('darkBody');
+		console.log(document.getElementsByTagName("body")[0]);
+		var messages = document.getElementsByTagName("li");
+			for (var i = 0; i < messages.length; i++) {
+				messages[i].classList.add('alert-info');
+				messages[i].classList.remove('dark-info');
+			}
 	}
 }
 
