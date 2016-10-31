@@ -1,19 +1,29 @@
 {
 	"messages": [
 		{
-			"message": "Hey bra, how we doin' man?"
+			"user": "Rivers Cuomo",
+			"message": "Hey bra, how we doin' man?",
+			"timestamp": "Mon Oct 31 1994 11:48:54"
 		},
 		{
-			"message": "It's been a while man, life's so rad!"
+			"user": "Brian Bell",
+			"message": "It's been a while man, life's so rad!",
+			"timestamp": "Mon Oct 31 1994 11:52:32"
 		},
 		{
-			"message": "Aw man, you want a beer?"
+			"user": "Patrick Wilson",
+			"message": "Aw man, you want a beer?",
+			"timestamp": "Mon Oct 31 1994 11:53:42"
 		},
 		{
-			"message": "Aw man, this is the best.  I'm so glad we're all back together and stuff!"
+			"user": "Scott Shriner",
+			"message": "Aw man, this is the best.  I'm so glad we're all back together and stuff!",
+			"timestamp": "Mon Oct 31 1994 11:53:47"
 		},
 		{
-			"message": "Hey, did you know about the party after the show?"
+			"user": "Bill Clinton",
+			"message": "Hey, did you know about the party after the show?",
+			"timestamp": "Mon Oct 31 1994 11:53:57"
 		}
 	]
 }
