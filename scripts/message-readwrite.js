@@ -18,7 +18,7 @@ var Chatty = (function (oldChatty) {
     oldChatty.putMessageOnDOM = function (elementID, messageObj, idNumber) {
         var outputMessage = "";
 
-        outputMessage += `<li class="alert alert-info" id="${idNumber}">${messageObj.message} 
+        outputMessage += `<li class="alert alert-info" id="${idNumber}">${messageObj.user} (${messageObj.timestamp}): ${messageObj.message} 
       	<button type="button" class="btn btn-success pull-right" id="${idNumber}">Delete</button></li>`;
 
         elementID.innerHTML += outputMessage;

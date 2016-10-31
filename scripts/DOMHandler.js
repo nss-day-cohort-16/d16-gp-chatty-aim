@@ -19,6 +19,8 @@ outputBox.addEventListener('click', outputBoxFunc);
 
 /* HELPER FUNCTIONS */
 
+var user = "Buddy Holly";
+
 function initMessage(messagesArg) {
 	console.log(messagesArg);
   for (var i = 0; i < messagesArg.length; i++){
@@ -33,8 +35,12 @@ function checkEnter(event) {
 	// Checks value of inputField on "Enter" press
 	if (event.keyCode === 13 && inputField.value.length) {
 		var index = Chatty.getMessages().length;
+		var timestamp = Date();
+		timestamp = timestamp.slice(0, timestamp.search("GMT") - 1);
 		var messageObj = {
-			"message": inputField.value
+			"user": user,
+			"message": inputField.value,
+			"timestamp": timestamp
 		};
 		Chatty.putMessageOnDOM(outputBox, messageObj, index);
 		Chatty.writeMessages(messageObj);
